@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logowanie personelu</title>
+</head>
+<body>
+    <h2>Logowanie personelu</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="phone_number">Numer telefonu:</label>
+        <input type="tel" name="phone_number" required><br>
+        <label for="password">Hasło:</label>
+        <input type="password" name="password" required><br>
+        <input type="submit" value="Zaloguj">
+    </form>
+</body>
+</html>

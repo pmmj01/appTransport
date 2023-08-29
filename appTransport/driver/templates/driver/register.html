@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejestracja Kierowcy</title>
+</head>
+<body>
+    <h2>Rejestracja kierowcy</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="first_name">Imię:</label>
+        <input type="text" name="first_name" required><br>
+        <label for="last_name">Nazwisko:</label>
+        <input type="text" name="last_name" required><br>
+        <label for="phone_number">Numer telefonu:</label>
+        <input type="tel" name="phone_number" required><br>
+        <label for="driver_license">Prawo jazdy:</label>
+        <select for="driver_license">
+        </select><br>
+        <label for="email">Email:</label>
+        <input type="text" name="email" required><br>
+        <label for="password">Hasło:</label>
+        <input type="password" name="password" required><br>
+        <input type="submit" value="Zarejestruj">
+    </form>
+</body>
+</html>

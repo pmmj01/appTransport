@@ -1,7 +1,13 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import AbstractUser
 from forwarding.models import Info_transport
 from staff.models import Truck, Trailer
+
+
+DRIVE_LICENSE = [
+        ('C', 'C'),
+        ('C+E', 'C+E'),
+    ]
 
 
 STATUS_CHOICES = [
@@ -30,6 +36,17 @@ UNLOADING_STATUS_CHOICES = [
         ('unloaded', 'Rozładowany'),
         ('waiting_for_unloading', 'Oczekiwanie na rozładunek'),
     ]
+
+
+class User(AbstractUser):
+    first_name = models.CharField(max_length=30, blank=True, verbose_name="Imię")
+    last_name = models.CharField(max_length=30, blank=True, verbose_name="Nazwisko")
+    phone_number = models.CharField(max_length=10, unique=True, blank=True, verbose_name="Numer telefonu")
+    drive_license = models.CharField(choices=DRIVE_LICENSE, blank=True, verbose_name="Prawo jazdy")
+    email_address = models.EmailField(unique=True, blank=True, verbose_name="Email") 
+    
+    # def __str__(self):
+    #     return self.firs_name + self.last_name
 
 
 class Info_of_truck(models.Model):
