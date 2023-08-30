@@ -7,7 +7,7 @@
 </head>
 <body>
     <h2>Rejestracja kierowcy</h2>
-    <form method="post">
+    <form method="post" id="registration-form">
         {% csrf_token %}
         <label for="first_name">Imię:</label>
         <input type="text" name="first_name" required><br>
@@ -24,5 +24,10 @@
         <input type="password" name="password" required><br>
         <input type="submit" value="Zarejestruj">
     </form>
+    <div id="registration-form-container"></div>
+<script>
+    // Renderuj komponent Reacta do kontenera
+    ReactDOM.render(<RegistrationForm />, document.getElementById('registration-form-container'));
+</script>
 </body>
 </html>

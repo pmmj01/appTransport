@@ -1,0 +1,43 @@
+{
+  "editor.defaultFormatter": null,
+  "editor.formatOnSave": true,
+  "python.formating.provider": "black",
+  "python.formating.blackArgs": ["--line-length", "119"],
+  "python.linting.enabled": true,
+  "python.linting.lintOnSave": true,
+  "python.linting.flake8Enabled": true,
+  "python.formating.flake8Args": ["--line-length", "119"],
+  "[python]": {
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.formatOnType": true,
+    "editor.wordBasedSuggestions": true,
+    "editot.codeActionsOnSave": {
+      "spurce.organizeImports": true
+    },
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+
+  "editor.defaultFormatter": null,
+  "editor.formatOnSave": true,
+  "javascript.format.enable": false, // Wyłącz wbudowane formatowanie JS
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "editor.wordBasedSuggestions": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // Użyj Prettier do formatowania
+  "editor.tabSize": 2, // Rozmiar tabulatora
+  "eslint.autoFixOnSave": true, // Wykonywanie ESLint podczas zapisywania
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "prettier.singleQuote": true, // Użyj pojedynczych cudzysłowów
+  "prettier.trailingComma": "es5", // Użyj przecinka na końcu obiektów i tablic
+  "prettier.arrowParens": "always", // Używaj nawiasów wokół pojedynczych argumentów funkcji strzałkowych
+  "prettier.jsxSingleQuote": true, // Używaj pojedynczych cudzysłowów w JSX
+  "javascript.updateImportsOnFileMove.enabled": "always", // Aktualizuj importy po przeniesieniu pliku
+  "editor.codeActionsOnSaveTimeout": 1500,
+  "explorer.confirmDragAndDrop": false // Wyłącz potwierdzanie przeciągania i upuszczania plików w eksploratorze
+}

@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+// import { createRoot } from "react-dom/client"
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import AdminLoginForm from './components/login';
+import RegistrationForm from './components/registrationDriverForm';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/'>
+          <Route path='admin/' Component={AdminLoginForm} />
+          <Route path='register-driver/' Component={RegistrationForm} />
+        </Route>
+      </Routes>
+    </Router>
   );
-}
+};
+
+// const container = document.getElementById("app");
+// const root = createRoot(container);
+// root.render(<App/>);
 
 export default App;

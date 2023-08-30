@@ -1,9 +1,9 @@
-from django.urls import path
-from . import views
+# from django.urls import path
+# from .views import UserRegistration
 
-app_name = 'driver'
+# app_name = 'driver'
 
 
-urlpatterns = [
-    path('register/', views.register_driver, name='register_driver'),
-]
+# urlpatterns = [
+    # path('register-driver/', UserRegistration.as_view(), name='register_driver'),
+# ]
